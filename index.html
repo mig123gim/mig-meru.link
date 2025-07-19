@@ -11,13 +11,19 @@
     body {
       margin: 0;
       font-family: 'Russo One', sans-serif;
-      background: radial-gradient(circle at top left, #1a1a1a, #2c2c2c 70%, #0f0f0f);
+      background: linear-gradient(180deg, #1a1a1a, #0f0f0f);
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 20px;
       background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+      background-size: cover;
+      animation: backgroundMove 20s linear infinite;
+    }
+    @keyframes backgroundMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
     }
     .cover {
       width: 100%;
@@ -26,6 +32,11 @@
       border-radius: 10px;
       margin-bottom: 20px;
       box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+      animation: pulse 5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); }
+      50% { transform: scale(1.02); box-shadow: 0 0 30px rgba(255, 204, 0, 0.8); }
     }
     h1, h2 {
       margin: 10px 0;
@@ -67,10 +78,15 @@
     .qr-wrapper {
       margin-left: 20px;
       text-align: center;
+      animation: fadein 3s ease-in;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
     .qr-wrapper img.qr {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
@@ -78,7 +94,8 @@
       display: block;
       font-size: 14px;
       margin-top: 5px;
-      color: #444;
+      color: #111;
+      font-weight: bold;
     }
     footer {
       margin-top: 40px;
@@ -89,6 +106,9 @@
   </style>
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Scott_Holmes_Music/Cinematic_Suspense_Series_Volume_1/Scott_Holmes_Music_-_Darkness_Is_Coming.mp3" type="audio/mpeg">
+  </audio>
   <img src="migaeris-cover.png" alt="Обложка трека" class="cover">
   <h1>MIGaeris</h1>
   <h2>«Я иду, я живу, я дышу»</h2>
@@ -97,50 +117,57 @@
     <div class="button-row">
       <a href="https://music.yandex.ru/album/37437243/track/141058883" target="_blank">🎧 Yandex Music</a>
       <div class="qr-wrapper">
-        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://music.yandex.ru/album/37437243/track/141058883&size=200x200" alt="QR Yandex">
-        <span>📷 Наведи камеру</span>
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://music.yandex.ru/album/37437243/track/141058883&size=160x160" alt="QR Yandex">
+        <span>QR-код</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://open.spotify.com/album/0tCQFs2w6VgTBt0tLsJGhB" target="_blank">🎧 Spotify</a>
       <div class="qr-wrapper">
-        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://open.spotify.com/album/0tCQFs2w6VgTBt0tLsJGhB&size=200x200" alt="QR Spotify">
-        <span>📷 Наведи камеру</span>
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://open.spotify.com/album/0tCQFs2w6VgTBt0tLsJGhB&size=160x160" alt="QR Spotify">
+        <span>QR-код</span>
+      </div>
+    </div>
+    <div class="button-row">
+      <a href="https://music.apple.com/" target="_blank">🎧 Apple Music</a>
+      <div class="qr-wrapper">
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://music.apple.com/&size=160x160" alt="QR Apple">
+        <span>QR-код</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://vk.com/artist/migaeris" target="_blank">🎧 VK Музыка</a>
       <div class="qr-wrapper">
-        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://vk.com/artist/migaeris&size=200x200" alt="QR VK">
-        <span>📷 Наведи камеру</span>
-      </div>
-    </div>
-    <div class="button-row">
-      <a href="https://ok.ru/music/artist/122908107989726" target="_blank">🎧 OK Музыка</a>
-      <div class="qr-wrapper">
-        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://ok.ru/music/artist/122908107989726&size=200x200" alt="QR OK">
-        <span>📷 Наведи камеру</span>
-      </div>
-    </div>
-    <div class="button-row">
-      <a href="https://zvuk.com/artist/213328988" target="_blank">🎧 Звук</a>
-      <div class="qr-wrapper">
-        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://zvuk.com/artist/213328988&size=200x200" alt="QR Zvuk">
-        <span>📷 Наведи камеру</span>
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://vk.com/artist/migaeris&size=160x160" alt="QR VK">
+        <span>QR-код</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://www.boomplay.com/albums/113644946" target="_blank">🎧 Boomplay</a>
       <div class="qr-wrapper">
-        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.boomplay.com/albums/113644946&size=200x200" alt="QR Boomplay">
-        <span>📷 Наведи камеру</span>
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.boomplay.com/albums/113644946&size=160x160" alt="QR Boomplay">
+        <span>QR-код</span>
+      </div>
+    </div>
+    <div class="button-row">
+      <a href="https://zvuk.com/artist/213328988" target="_blank">🎧 Звук</a>
+      <div class="qr-wrapper">
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://zvuk.com/artist/213328988&size=160x160" alt="QR Zvuk">
+        <span>QR-код</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://www.amazon.de/music/player/artists/B0FGW5MFJF/migaeris" target="_blank">🎧 Amazon Music</a>
       <div class="qr-wrapper">
-        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.amazon.de/music/player/artists/B0FGW5MFJF/migaeris&size=200x200" alt="QR Amazon">
-        <span>📷 Наведи камеру</span>
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.amazon.de/music/player/artists/B0FGW5MFJF/migaeris&size=160x160" alt="QR Amazon">
+        <span>QR-код</span>
+      </div>
+    </div>
+    <div class="button-row">
+      <a href="https://ok.ru/music/artist/122908107989726" target="_blank">🎧 Одноклассники</a>
+      <div class="qr-wrapper">
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://ok.ru/music/artist/122908107989726&size=160x160" alt="QR OK">
+        <span>QR-код</span>
       </div>
     </div>
   </div>
