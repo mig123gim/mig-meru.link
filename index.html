@@ -11,12 +11,13 @@
     body {
       margin: 0;
       font-family: 'Russo One', sans-serif;
-      background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+      background: radial-gradient(circle at top left, #1a1a1a, #2c2c2c 70%, #0f0f0f);
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 20px;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
     }
     .cover {
       width: 100%;
@@ -24,6 +25,7 @@
       border: 4px solid #ffcc00;
       border-radius: 10px;
       margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
     }
     h1, h2 {
       margin: 10px 0;
@@ -64,16 +66,24 @@
     }
     .qr-wrapper {
       margin-left: 20px;
+      text-align: center;
     }
     .qr-wrapper img.qr {
-      width: 130px;
-      height: 130px;
+      width: 140px;
+      height: 140px;
       border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .qr-wrapper span {
+      display: block;
+      font-size: 14px;
+      margin-top: 5px;
+      color: #444;
     }
     footer {
       margin-top: 40px;
       font-size: 14px;
-      color: #ddd;
+      color: #bbb;
       text-align: center;
     }
   </style>
@@ -88,42 +98,49 @@
       <a href="https://music.yandex.ru/album/37437243/track/141058883" target="_blank">🎧 Yandex Music</a>
       <div class="qr-wrapper">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://music.yandex.ru/album/37437243/track/141058883&size=200x200" alt="QR Yandex">
+        <span>📷 Наведи камеру</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://open.spotify.com/album/0tCQFs2w6VgTBt0tLsJGhB" target="_blank">🎧 Spotify</a>
       <div class="qr-wrapper">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://open.spotify.com/album/0tCQFs2w6VgTBt0tLsJGhB&size=200x200" alt="QR Spotify">
+        <span>📷 Наведи камеру</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://vk.com/artist/migaeris" target="_blank">🎧 VK Музыка</a>
       <div class="qr-wrapper">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://vk.com/artist/migaeris&size=200x200" alt="QR VK">
+        <span>📷 Наведи камеру</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://ok.ru/music/artist/122908107989726" target="_blank">🎧 OK Музыка</a>
       <div class="qr-wrapper">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://ok.ru/music/artist/122908107989726&size=200x200" alt="QR OK">
+        <span>📷 Наведи камеру</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://zvuk.com/artist/213328988" target="_blank">🎧 Звук</a>
       <div class="qr-wrapper">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://zvuk.com/artist/213328988&size=200x200" alt="QR Zvuk">
+        <span>📷 Наведи камеру</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://www.boomplay.com/albums/113644946" target="_blank">🎧 Boomplay</a>
       <div class="qr-wrapper">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.boomplay.com/albums/113644946&size=200x200" alt="QR Boomplay">
+        <span>📷 Наведи камеру</span>
       </div>
     </div>
     <div class="button-row">
       <a href="https://www.amazon.de/music/player/artists/B0FGW5MFJF/migaeris" target="_blank">🎧 Amazon Music</a>
       <div class="qr-wrapper">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.amazon.de/music/player/artists/B0FGW5MFJF/migaeris&size=200x200" alt="QR Amazon">
+        <span>📷 Наведи камеру</span>
       </div>
     </div>
   </div>
@@ -135,8 +152,5 @@
 </body>
 </html>
 
-
-
-</html>
 
 
