@@ -11,7 +11,9 @@
     body {
       margin: 0;
       font-family: 'Russo One', sans-serif;
-      background-color: #121212;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      background-attachment: fixed;
+      background-size: cover;
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -32,45 +34,71 @@
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 20px;
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
       margin-top: 20px;
     }
-    .button {
+    .button-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       background-color: #ffcc00;
+      border-radius: 8px;
+      padding: 12px 20px;
+    }
+    .button-row a {
       color: #121212;
       text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-align: center;
       font-weight: bold;
-      transition: background 0.3s;
     }
-    .button:hover {
-      background-color: #e6b800;
+    .button-row img.qr {
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
     }
     footer {
       margin-top: 40px;
       font-size: 14px;
-      color: #777;
+      color: #ddd;
       text-align: center;
     }
   </style>
 </head>
 <body>
-  <img src="/mig-meru.link/migaeris-cover.png" alt="Обложка трека" class="cover">
+  <img src="migaeris-cover.png" alt="Обложка трека" class="cover">
   <h1>MIGaeris</h1>
   <h2>«Я иду, я живу, я дышу»</h2>
 
   <div class="buttons">
-    <a class="button" href="https://music.yandex.ru/album/37437243/track/141058883" target="_blank">🎧 Yandex Music</a>
-    <a class="button" href="https://open.spotify.com/album/0tCQFs2w6VgTBt0tLsJGhB" target="_blank">🎧 Spotify</a>
-    <a class="button" href="https://vk.com/artist/migaeris" target="_blank">🎧 VK Музыка</a>
-    <a class="button" href="https://ok.ru/music/artist/122908107989726" target="_blank">🎧 OK Музыка</a>
-    <a class="button" href="https://zvuk.com/artist/213328988" target="_blank">🎧 Звук</a>
-    <a class="button" href="https://www.boomplay.com/albums/113644946" target="_blank">🎧 Boomplay</a>
-    <a class="button" href="https://www.amazon.de/music/player/artists/B0FGW5MFJF/migaeris" target="_blank">🎧 Amazon Music</a>
+    <div class="button-row">
+      <a href="https://music.yandex.ru/album/37437243/track/141058883" target="_blank">🎧 Yandex Music</a>
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://music.yandex.ru/album/37437243/track/141058883&size=100x100" alt="QR Yandex">
+    </div>
+    <div class="button-row">
+      <a href="https://open.spotify.com/album/0tCQFs2w6VgTBt0tLsJGhB" target="_blank">🎧 Spotify</a>
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://open.spotify.com/album/0tCQFs2w6VgTBt0tLsJGhB&size=100x100" alt="QR Spotify">
+    </div>
+    <div class="button-row">
+      <a href="https://vk.com/artist/migaeris" target="_blank">🎧 VK Музыка</a>
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://vk.com/artist/migaeris&size=100x100" alt="QR VK">
+    </div>
+    <div class="button-row">
+      <a href="https://ok.ru/music/artist/122908107989726" target="_blank">🎧 OK Музыка</a>
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://ok.ru/music/artist/122908107989726&size=100x100" alt="QR OK">
+    </div>
+    <div class="button-row">
+      <a href="https://zvuk.com/artist/213328988" target="_blank">🎧 Звук</a>
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://zvuk.com/artist/213328988&size=100x100" alt="QR Zvuk">
+    </div>
+    <div class="button-row">
+      <a href="https://www.boomplay.com/albums/113644946" target="_blank">🎧 Boomplay</a>
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.boomplay.com/albums/113644946&size=100x100" alt="QR Boomplay">
+    </div>
+    <div class="button-row">
+      <a href="https://www.amazon.de/music/player/artists/B0FGW5MFJF/migaeris" target="_blank">🎧 Amazon Music</a>
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.amazon.de/music/player/artists/B0FGW5MFJF/migaeris&size=100x100" alt="QR Amazon">
+    </div>
   </div>
 
   <footer>
